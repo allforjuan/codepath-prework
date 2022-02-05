@@ -50,9 +50,9 @@ class ViewController: UIViewController {
     
     @IBAction func groupValueChanged(_ sender: UIStepper) {
         partySize.text = Int(sender.value).description
-        //let groupSize = Int(sender.value)
-        //print(type(of: groupSize))
-        //let groupTip: Double = total / groupSize
+        let groupSize = Int(sender.value)
+        let groupTip =  total / Double(groupSize)
+        partyAmountLabel.text = String(format: "$%.2f", groupTip)
     }
     
 }
